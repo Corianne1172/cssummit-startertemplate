@@ -1,5 +1,5 @@
 {
-  "name": "cssummit-startertemplate",
+  "name": "quantumconnect",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
     "start-project": "node scripts/start-project.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
     "@clack/prompts": "^1.9.0",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.5.2",

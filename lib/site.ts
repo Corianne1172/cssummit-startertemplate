@@ -27,7 +27,7 @@ function kitNav(): NavLink[] {
 }
 
 export const site = {
-  name: "Black CS Success Summit",
+  name: "QuantumConnect",
   shortName: "CS Summit",
   tagline: "Build something real this weekend.",
   description:

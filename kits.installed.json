@@ -1,1 +1,13 @@
-{ "installed": [] }
+{
+  "installed": [
+    {
+      "name": "chatbot",
+      "nav": [
+        {
+          "label": "Chat",
+          "href": "/chat"
+        }
+      ]
+    }
+  ]
+}
