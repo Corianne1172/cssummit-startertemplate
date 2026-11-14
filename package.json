@@ -12,7 +12,9 @@
     "typecheck": "next typegen && tsc --noEmit",
     "verify": "biome check && next typegen && tsc --noEmit && next build",
     "kit": "node scripts/kit.mjs",
-    "start-project": "node scripts/start-project.mjs"
+    "start-project": "node scripts/start-project.mjs",
+    "seed": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/seed.mjs",
+    "supabase:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/supabase-check.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

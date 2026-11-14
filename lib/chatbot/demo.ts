@@ -20,23 +20,30 @@ Then edit lib/chatbot/system-prompt.ts to give the bot its own job. The steps ar
 // These match the example STARTER_PROMPTS. If you change the prompts, unmatched questions get
 // the generic reply above, which is fine.
 const STARTER_REPLIES = [
-  `${PREFIX}Most street problems, like potholes and streetlights that are out, go through Chicago 311.
+  `${PREFIX}Here is a sample roadmap toward a quantum and microelectronics technician job.
 
-1. Call 311, or use the CHI 311 app or website.
-2. Give the exact address or the nearest cross streets.
-3. Save the request number so you can check on it later.
+1. Learn what the role is. The Chicago Quantum Exchange shares information on quantum careers and the training they call for.
+2. Build the basics. Ask City Colleges of Chicago, including Olive-Harvey College on the far South Side, which math, electronics and lab courses fit technician work.
+3. Find a mentor who works in the field on the Match page at /match and ask what their first year looked like.
+4. Follow the Illinois Quantum and Microelectronics Park (IQMP) to see which employers and job types arrive.
 
-(A real reply from Claude would follow the instructions in lib/chatbot/system-prompt.ts.)`,
-  `${PREFIX}Chicago is split into 50 wards, and each ward elects an alderperson to the City Council.
+Check details with each program before you apply, because things change.`,
+  `${PREFIX}Here is a sample roadmap for someone with construction experience.
 
-Your alderperson votes on city laws and the budget, and their ward office can help with local problems like trash pickup, permits and street repairs.
+1. Write down the trades work you have done and any cards or certificates you hold.
+2. Talk to HIRE360 about construction trade apprenticeships. Chicago Women in Trades prepares women for the same kind of careers.
+3. Find a mentor in construction or civil engineering on the Match page at /match.
+4. Follow the Illinois Quantum and Microelectronics Park (IQMP) to see which contractors and job types come to the site.
 
-To find yours, look up your address on the city's ward map, then call or email the ward office.`,
-  `${PREFIX}During heat emergencies the city opens cooling centers, and public libraries and park field houses are often open as places to cool off.
+Check details with each program before you apply, because things change.`,
+  `${PREFIX}Here is a sample roadmap for a first software or IT job.
 
-1. Check chicago.gov or call 311 for today's locations and hours.
-2. Bring water and any medicine you need.
-3. If someone shows signs of heat stroke, call 911.`,
+1. Pick a starting lane: IT support, software or cybersecurity.
+2. Look at job-focused training. Per Scholas Chicago, i.c.stars and Year Up each train people for tech work, and City Colleges of Chicago offers certificates and degrees.
+3. Not sure which one fits? A Chicago Cook Workforce Partnership job center offers career coaching and training referrals.
+4. Find a mentor who works in tech on the Match page at /match.
+
+Check details with each program before you apply, because things change.`,
 ];
 
 export function demoReplyFor(question: string): string {

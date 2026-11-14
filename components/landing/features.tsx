@@ -1,10 +1,10 @@
 import {
-  AccessibilityIcon,
-  BlocksIcon,
-  PaletteIcon,
-  RocketIcon,
+  GaugeIcon,
+  MessageCircleIcon,
+  RouteIcon,
   ShieldCheckIcon,
-  TerminalSquareIcon,
+  TargetIcon,
+  UsersIcon,
 } from "lucide-react";
 import { Container, Section } from "@/components/container";
 import { cn } from "@/lib/utils";
@@ -12,34 +12,34 @@ import { SectionHeading } from "./section-heading";
 
 const features = [
   {
-    icon: BlocksIcon,
-    title: "Only the pieces you need",
-    text: "Seven kits sit outside the app until you add one. A game team never carries a database.",
+    icon: TargetIcon,
+    title: "Start with your goal",
+    text: "Pick the kind of job you want, the skills you have and the ones you want to learn.",
   },
   {
-    icon: PaletteIcon,
-    title: "Nobody's demo looks the same",
-    text: "Flip shape, buttons, type, layout and colour live, or hit Shuffle. Every component follows.",
+    icon: UsersIcon,
+    title: "Meet local mentors",
+    text: "Browse one mentor at a time: people from nearby neighborhoods who already do the work.",
   },
   {
-    icon: TerminalSquareIcon,
-    title: "Claude Code ready",
-    text: "Project rules and skills are included, so Claude builds in the template's style from the first prompt.",
+    icon: GaugeIcon,
+    title: "See why you matched",
+    text: "Every card shows a score out of 100 and the reasons behind it. No black box.",
+  },
+  {
+    icon: MessageCircleIcon,
+    title: "Connect and say hello",
+    text: "When you match, you get a first message to send so the conversation is easy to start.",
+  },
+  {
+    icon: RouteIcon,
+    title: "Get a roadmap",
+    text: "An AI assistant turns your goal into a few clear steps, using real Chicago training programs.",
   },
   {
     icon: ShieldCheckIcon,
-    title: "Your accounts, your keys",
-    text: "Supabase and Vercel are yours. Nothing points at the organisers, and secrets stay in .env.local.",
-  },
-  {
-    icon: AccessibilityIcon,
-    title: "Accessible by default",
-    text: "Contrast-checked colours, visible focus rings and keyboard-friendly components out of the box.",
-  },
-  {
-    icon: RocketIcon,
-    title: "Ships in one command",
-    text: "Builds with zero env vars, so you can deploy to your own Vercel before you write a line.",
+    title: "Safe by design",
+    text: "First names only, no photos, no contact details. The score ignores race, gender and age.",
   },
 ];
 
@@ -49,10 +49,11 @@ export function Features() {
     <Section id="features">
       <Container className="flex flex-col gap-12">
         <SectionHeading
-          eyebrow="Why this starter"
-          title="Less setup, more demo."
+          eyebrow="How it works"
+          title="A person who made it, showing you how."
         >
-          Everything a hackathon team burns the first three hours on is done.
+          The quantum park brings jobs in tech, trades and services.
+          QuantumConnect helps South Side residents reach them.
         </SectionHeading>
         <ul
           className={cn(

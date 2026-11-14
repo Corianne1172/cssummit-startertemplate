@@ -2,7 +2,7 @@ import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { hero, kitCatalog, wizardLines } from "../content";
+import { hero, jobFields, matchPreview } from "../content";
 
 /** Shared pieces of the four hero layouts. */
 
@@ -43,7 +43,7 @@ export function HeroActions({ className }: { className?: string }) {
   );
 }
 
-/** A fake terminal showing the first-run wizard. */
+/** A small readout of one sample match. */
 export function TerminalCard({ className }: { className?: string }) {
   return (
     <div
@@ -56,10 +56,10 @@ export function TerminalCard({ className }: { className?: string }) {
         <span className="size-2.5 rounded-full bg-chart-1" />
         <span className="size-2.5 rounded-full bg-chart-4" />
         <span className="size-2.5 rounded-full bg-chart-3" />
-        <span className="ml-2 text-xs text-muted-foreground">terminal</span>
+        <span className="ml-2 text-xs text-muted-foreground">match score</span>
       </div>
       <ul className="flex flex-col gap-2 p-5">
-        {wizardLines.map((line) => (
+        {matchPreview.map((line) => (
           <li
             key={line.text}
             className={cn(
@@ -82,7 +82,7 @@ export function TerminalCard({ className }: { className?: string }) {
 export function KitChips({ className }: { className?: string }) {
   return (
     <ul className={cn("flex flex-wrap gap-2", className)}>
-      {kitCatalog.map((kit) => (
+      {jobFields.map((kit) => (
         <li
           key={kit.name}
           className="inline-flex items-center gap-2 rounded-badge border bg-card/60 px-3 py-1.5 text-sm"

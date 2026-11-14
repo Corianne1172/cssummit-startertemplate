@@ -12,7 +12,7 @@ type InstalledKit = { name: string; nav?: NavLink[] };
 
 const baseNav: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Styleguide", href: "/styleguide" },
+  { label: "Match", href: "/match" },
 ];
 
 function kitNav(): NavLink[] {
@@ -29,14 +29,15 @@ function kitNav(): NavLink[] {
 export const site = {
   name: "QuantumConnect",
   shortName: "CS Summit",
-  tagline: "Build something real this weekend.",
+  tagline:
+    "Mentors and training roadmaps for the jobs coming to the South Side.",
   description:
-    "A hackathon starter for the Black CS Success Summit: Next.js, a switchable design system, opt-in kits and Claude Code, ready on the first run.",
+    "QuantumConnect matches South Side Chicago residents with local mentors and builds a training roadmap toward jobs created by the Illinois Quantum and Microelectronics Park.",
   /** Small print under the wordmark. */
-  org: "Chi Tech CLLCT",
+  org: "Black CS Success Summit 2026",
   nav: [...baseNav, ...kitNav()],
   /** The main call to action in the header. */
-  cta: { label: "Get started", href: "/#get-started" },
+  cta: { label: "Find a mentor", href: "/match" },
   links: {
     repo: "https://github.com/",
     nextDocs: "https://nextjs.org/docs",

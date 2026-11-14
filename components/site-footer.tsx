@@ -28,9 +28,9 @@ export function SiteFooter() {
       </Container>
       <Container className="flex flex-col gap-2 border-t py-6 text-xs text-muted-foreground sm:flex-row sm:justify-between">
         <p>
-          Built at the {site.name} with {site.org}.
+          Built at the {site.org} hackathon. All demo profiles are fictional.
         </p>
-        <p className="font-mono">Next.js · Tailwind · shadcn/ui</p>
+        <p className="font-mono">Next.js · Supabase · Claude</p>
       </Container>
     </footer>
   );

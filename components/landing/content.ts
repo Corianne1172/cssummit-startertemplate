@@ -1,82 +1,45 @@
 import {
-  BookOpenIcon,
-  BotIcon,
+  AtomIcon,
+  BrainCircuitIcon,
   ChartColumnIcon,
-  Gamepad2Icon,
-  GlobeIcon,
-  KeyRoundIcon,
+  CodeIcon,
+  HardHatIcon,
   type LucideIcon,
-  MapIcon,
+  ShieldCheckIcon,
+  UtensilsIcon,
+  WrenchIcon,
 } from "lucide-react";
 
-/** Landing page copy. Short and concrete: the readers are students at a hackathon. */
+/** Landing page copy. Short and concrete: no invented numbers. */
 export const hero = {
-  eyebrow: "Hackathon starter",
-  titleStart: "Build something",
-  titleEm: "real",
-  titleEnd: "this weekend.",
-  lede: "A Next.js starter in the summit's colours. Pick a kit for what you're building, remix the design in one click, and let Claude Code do the heavy lifting.",
-  primary: { label: "Start a project", href: "#get-started" },
-  secondary: { label: "See the styleguide", href: "/styleguide" },
+  eyebrow: "South Side Chicago",
+  titleStart: "Find a",
+  titleEm: "mentor",
+  titleEnd: "for the jobs coming to South Works.",
+  lede: "The Illinois Quantum and Microelectronics Park is being built on the former U.S. Steel South Works site on Chicago's South Side. QuantumConnect matches residents with local professionals who mentor them, and builds a step-by-step training roadmap. Demo profiles are fictional.",
+  primary: { label: "Find a mentor", href: "/match" },
+  secondary: { label: "Build my roadmap", href: "/chat" },
 };
 
-export type KitSummary = {
-  name: string;
-  title: string;
-  blurb: string;
-  icon: LucideIcon;
-};
+export type JobField = { name: string; title: string; icon: LucideIcon };
 
-/** The seven kits from the Hackathon 101 deck. Each is opt-in: `pnpm kit add <name>`. */
-export const kitCatalog: KitSummary[] = [
-  {
-    name: "website",
-    title: "Website",
-    blurb: "About, contact and content pages.",
-    icon: GlobeIcon,
-  },
-  {
-    name: "app",
-    title: "App",
-    blurb: "Sign-in and a dashboard on your own Supabase.",
-    icon: KeyRoundIcon,
-  },
-  {
-    name: "chatbot",
-    title: "Chatbot",
-    blurb: "Streaming chat on the Claude API.",
-    icon: BotIcon,
-  },
-  {
-    name: "game",
-    title: "Game",
-    blurb: "Canvas game loop, input and high scores.",
-    icon: Gamepad2Icon,
-  },
-  {
-    name: "dashboard",
-    title: "Dashboard",
-    blurb: "Stat tiles, charts and a sortable table.",
-    icon: ChartColumnIcon,
-  },
-  {
-    name: "map",
-    title: "Map",
-    blurb: "A Chicago map with markers. No API key.",
-    icon: MapIcon,
-  },
-  {
-    name: "learning",
-    title: "Learning",
-    blurb: "Lessons, quizzes and progress.",
-    icon: BookOpenIcon,
-  },
+/** Job fields that come with the quantum park. Most are not physics jobs. */
+export const jobFields: JobField[] = [
+  { name: "quantum", title: "Quantum tech", icon: AtomIcon },
+  { name: "software", title: "Software", icon: CodeIcon },
+  { name: "security", title: "Cybersecurity", icon: ShieldCheckIcon },
+  { name: "data", title: "Data science", icon: ChartColumnIcon },
+  { name: "ai", title: "AI", icon: BrainCircuitIcon },
+  { name: "construction", title: "Construction", icon: HardHatIcon },
+  { name: "facilities", title: "Facilities", icon: WrenchIcon },
+  { name: "hospitality", title: "Catering", icon: UtensilsIcon },
 ];
 
-export const wizardLines = [
-  { prompt: true, text: "pnpm start-project" },
-  { prompt: false, text: "◆ Project name › study-buddy" },
-  { prompt: false, text: "◆ Kits › chatbot, learning" },
-  { prompt: false, text: "◆ Design › shuffle" },
-  { prompt: false, text: "✔ Ready. Run pnpm dev" },
+/** A sample match, shown as a small readout in some hero layouts. */
+export const matchPreview = [
+  { prompt: true, text: "match maya --with mentors" },
+  { prompt: false, text: "◆ Shared focus › quantum computing, data science" },
+  { prompt: false, text: "◆ Can teach › SQL, interviewing" },
+  { prompt: false, text: "◆ Free when you are › Saturday" },
+  { prompt: false, text: "✔ 69% match. Say hello" },
 ];

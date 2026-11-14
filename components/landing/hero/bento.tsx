@@ -1,6 +1,6 @@
 import { PaletteIcon, SparklesIcon } from "lucide-react";
 import { Container } from "@/components/container";
-import { hero, kitCatalog } from "../content";
+import { hero, jobFields } from "../content";
 import { HeroActions, HeroLede, HeroTitle, TerminalCard } from "./parts";
 
 /** layout="bento": the hero is a grid of tiles, one idea per tile. */
@@ -18,11 +18,10 @@ export function HeroBento() {
           <SparklesIcon className="size-6" aria-hidden />
           <div>
             <p className="font-heading text-5xl leading-none font-bold">
-              {kitCatalog.length}
+              {jobFields.length}
             </p>
             <p className="mt-2 font-medium">
-              opt-in kits: website, app, chatbot, game, dashboard, map,
-              learning.
+              job fields coming with the park. Most are not physics jobs.
             </p>
           </div>
         </div>

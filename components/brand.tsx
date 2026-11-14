@@ -1,18 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-export const WORDMARK_SRC = "/brand/chitech-cllct-wordmark-v2.png";
-export const WORDMARK_ALT = "Chi Tech CLLCT";
+const sizes = { sm: "text-base", md: "text-xl", lg: "text-3xl" } as const;
 
-const heights = { sm: "h-4", md: "h-[1.375rem]", lg: "h-8" } as const;
-
-/**
- * The Chi Tech CLLCT wordmark with the project name under it. The wordmark is a white, teal
- * and orange PNG made for dark backgrounds, which is why the theme is dark only.
- * Rebrand by editing `site.name` in lib/site.ts (or swap the PNG in public/brand/).
- */
+/** The project wordmark, with a short line under it. Rename in lib/site.ts. */
 export function Brand({
   href = "/",
   size = "md",
@@ -20,7 +11,7 @@ export function Brand({
   className,
 }: {
   href?: string;
-  size?: keyof typeof heights;
+  size?: keyof typeof sizes;
   showName?: boolean;
   className?: string;
 }) {
@@ -28,21 +19,21 @@ export function Brand({
     <Link
       href={href}
       className={cn(
-        "group inline-flex min-w-0 flex-col items-start gap-1.5 rounded-sm",
+        "group inline-flex min-w-0 flex-col items-start gap-1 rounded-sm",
         className,
       )}
     >
-      <Image
-        src={WORDMARK_SRC}
-        alt={WORDMARK_ALT}
-        width={496}
-        height={60}
-        priority
-        className={cn("block w-auto max-w-full", heights[size])}
-      />
+      <span
+        className={cn(
+          "font-heading leading-none font-bold tracking-tight",
+          sizes[size],
+        )}
+      >
+        Quantum<span className="text-primary-text">Connect</span>
+      </span>
       {showName ? (
         <span className="truncate font-mono text-[0.6875rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase transition-colors group-hover:text-primary-text">
-          {site.name}
+          South Side mentors
         </span>
       ) : null}
     </Link>
